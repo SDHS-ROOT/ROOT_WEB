@@ -139,13 +139,14 @@ ul li {
 }
 #page_num {
     font-size: 14px;
-    margin-left: 260px;
+    margin-left: 330px;
     margin-top: 30px;
+    /* display: inline-block; */
 }
 #page_num ul li {
     float: left;
     margin-left: 10px;
-    text-align: center;
+    /* text-align: center; */
 }
 .fo_re {
     font-weight: bold;
