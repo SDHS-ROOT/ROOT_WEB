@@ -62,10 +62,10 @@ ul li {
     margin-top: 70px;
     font-size: 14px;
 }
-#in_name {
+#in_author {
     margin-top: 30px;
 }
-#in_name textarea {
+#in_author textarea {
     font-weight: bold;
     font-size: 26px;
     color: #333;
@@ -136,4 +136,18 @@ ul li {
 #bo_ser > ul > li {
     float: left;
     margin-left: 10px;
+}
+#page_num {
+    font-size: 14px;
+    margin-left: 260px;
+    margin-top: 30px;
+}
+#page_num ul li {
+    float: left;
+    margin-left: 10px;
+    text-align: center;
+}
+.fo_re {
+    font-weight: bold;
+    color: red;
 }
