@@ -33,9 +33,9 @@
         <!-- 목록, 수정, 삭제 -->
         <div id="bo_ser">
             <ul>
-                <li><a href="/">목록</a></li>
-                <li><a href="/ROOT_WEB/modify.php?idx=<?php echo $board['id']; ?>">[수정]</a></li>
-                <li><a href="delete.php?idx=<?php echo $board['id']; ?>">[삭제]</a></li>
+                <li><a href="/ROOT_WEB/">목록</a></li>
+                <li><a href="modify.php?id=<?php echo $board['id']; ?>">[수정]</a></li>
+                <li><a href="delete.php?id=<?php echo $board['id']; ?>">[삭제]</a></li>
             </ul>
         </div>
     </div>
