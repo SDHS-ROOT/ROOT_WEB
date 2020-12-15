@@ -1,0 +1,16 @@
+/* 동아리원 박스 */
+#gradeBox1{width: 800px; height: 350px; background: #E8E8E8; position: absolute; top: 50px; left: 100px;}
+#gradeBox2{width: 800px; height: 350px; background: #E8E8E8; position: absolute; top: 50px; left: 960px;}
+#gradeBox3{width: 800px; height: 350px; background: #E8E8E8; position: absolute; top: 450px; left: 100px;}
+#gradeBox4{width: 800px; height: 350px; background: #E8E8E8; position: absolute; top: 450px; left: 960px;}
+
+/* 뒷배경 */
+#gradeBackground{width: 1900px; height: 850px; background:cadetblue; position: relative; top: 50px;}
+
+
+/* 학년 */
+.gradeText1 {padding: 12px 70px; text-align: relative; font-size: 60px;}
+/* 이름 */
+.gradeText2 {padding: 10px 80px; text-align: relative; font-size: 50px;}
+/* 정보 */
+.gradeText3 {padding: 00px 85px; text-align: relative; font-size: 25px;}
