@@ -6,8 +6,7 @@
     $author = $_POST['author'];
     $title = $_POST['title'];
     $content = $_POST['content'];
-    $date = date('Y-m-d H:i:s');
-    $sql = mq("update board set author='".$author."', title='".$title."', content='".$content."', date='".$date."' where id='".$bno."'");
+    $sql = mq("update board set author='".$author."', title='".$title."', content='".$content."' where id='".$bno."'");
 ?>
 
 <script type="text/javascript">alert("수정되었습니다."); </script>
