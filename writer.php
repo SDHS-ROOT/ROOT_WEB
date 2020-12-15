@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>게시판</title>
-    <link rel="stylesheet" type="text/css" href="/ROOT_WEB/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 <body>
     <div id="board_write">
-        <h1><a href="/">자유게시판</a></h1>
+        <h1><a href="/ROOT_WEB/">자유게시판</a></h1>
         <h4>글을 작성하는 공간입니다.</h4>
         <div id="write_area">
             <form action="write_input.php" method="post">
@@ -22,14 +22,14 @@
                     <textarea name="title" id="utitle" cols="55" rows="1" placeholder="제목" maxlength="100" required></textarea>
                 </div>
                 <div class="wi_line"></div>
-                <div id="in_name">
-                    <textarea name="author" id="uauthor" cols="55" rows="1" placeholder="글쓴이" maxlength="100" require></textarea>
+                <div id="in_author">
+                    <textarea name="author" id="uauthor" cols="55" rows="1" placeholder="글쓴이" maxlength="50" require></textarea>
                 </div>
                 <div class="wi_line"></div>
                 <div id="in_content">
                     <textarea name="content" id="ucontent" placeholder="내용" required></textarea>
                 </div>
-                <div id="bt_se">
+                <div class="bt_se">
                     <button type="submit">글 작성</button>
                 </div>
             </form>   
