@@ -4,6 +4,27 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" href="css/root.css">
+    <script language="JavaScript">
+        /*배경설정이 적용되려면 body태그 내에 지정된 배경이미지가 없어야 합니다.*/
+        day=new Date()
+        m=day.getMonth()
+        if(m>=3 && m<6) { 
+        document.write('<body background="img/봄.jpg">')
+        }
+        else if(m>=6 && m<9) { 
+        document.write('<body background="img/여름.jpg">')
+        }
+        else if(m>=9 && m<12) { 
+        document.write('<body background="img/가을.jpg">')
+        }
+        else if (m=12) { 
+        document.write('<body background="img/겨울.jpg">')
+        }
+        else if (m<3) {
+        document.write('<body background="img/겨울.jpg">')
+        }
+        </script>
+        
 </head>
 <body>
     <div id="yb">
