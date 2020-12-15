@@ -40,7 +40,6 @@
 
                 $total_page = ceil($row_num / $list); // 페이징한 페이지 수 구하기
                 if($block_end > $total_page) $block_end = $total_page; // 만약 블록의 마지막 번호가 페이지 수보다 많다면 마지막 번호는 페이지 수
-                $total_block = ceil($total_page / $block_ct); // 블록 총 개수
                 $start_num = ($page - 1) * $list;
 
                 $sql2 = mq("select * from board order by id desc limit $start_num, $list");
@@ -81,20 +80,11 @@
                 <?php
                     if($page <= 1) // 현재 페이지가 1이라면
                         {echo "<li class='fo_re'>[<<]</li>";} // 링크 불가
-                    else {echo "<li><a href='?page=1'>[<<]</a></li>";} // 1번 페이지로 링크
-                    if($page > 1) {
-                        $pre = $page - 1; // 만약 현재 페이지가 3, 이전버튼을 누를 시 2번 페이지로
-                        echo "<li><a href='?page=$pre'>[<]</a></li>"; // 이전 페이지로 링크
-                    }            
+                    else {echo "<li><a href='?page=1'>[<<]</a></li>";} // 1번 페이지로 링크        
                     for($i = $block_start; $i <= $block_end; $i++) {
                         // 초기값을 블록의 시작번호를 조건으로 블록 시작 번호가 마지막 블록보다 작거나 같을 때까지 반복
                         if($page == $i) {echo "<li class='fo_re'>[$i]</li>";} // 현재 페이지 표시
                         else {echo "<li><a href='?page=$i'>[$i]</a></li>";}
-                    }
-                    if($block_num >= $total_block) {}
-                    else { // 현재 블록이 블록 총 개수보다 적다면
-                        $next = $page + 1;
-                        echo "<li><a href='?page=$next'>[>]</a></li>"; // 다음 페이지 링크. 현재 페이지가 4, +1하여 5페이지로
                     }
                     if($page >= $total_page) {echo "<li class='fo_re'>[>>]</li>";} // 마지막 페이지 표시
                     else {echo "<li><a href='?page=$total_page'>[>>]</a></li>";} // 마지막 페이지로 링크
