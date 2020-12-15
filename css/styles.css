@@ -12,7 +12,8 @@
  */
 
 .img-fluid{
-  width: 340px;
+  width: 700px;
+  border: solid 5px black;
 }
 
 
