@@ -24,15 +24,36 @@
                 </tr>
             </thead>
             <?php
+                if(isset($_GET['page']))
+                    $page = $_GET['page'];
+                else // 처음 접속시에는 page값이 없기 때문에 현재 페이지는 1로 설정
+                    $page = 1;
                 // board 테이블에서 id를 기준으로 내림차순해서 5개까지 표시
-                $sql = mq("select * from board order by id desc limit 0,5");
-                while($board = $sql->fetch_array()) {
+                $sql = mq("select * from board");
+                $row_num = mysqli_num_rows($sql); // 게시판 총 레코드 수
+                $list = 5; // 한 페이지에 보여줄 글 개수
+                $block_ct = 5; // 블록당 보여줄 페이지 개수
+
+                $block_num = ceil($page / $block_ct); // 현재 페이지 블록 구하기
+                $block_start = (($block_num - 1) * $block_ct) + 1; // 블록의 시작 번호
+                $block_end = $block_start + $block_ct - 1; // 블록 마지막 번호
+
+                $total_page = ceil($row_num / $list); // 페이징한 페이지 수 구하기
+                if($block_end > $total_page) $block_end = $total_page; // 만약 블록의 마지막 번호가 페이지 수보다 많다면 마지막 번호는 페이지 수
+                $total_block = ceil($total_page / $block_ct); // 블록 총 개수
+                $start_num = ($page - 1) * $list;
+
+                $sql2 = mq("select * from board order by id desc limit $start_num, $list");
+
+                while($board = $sql2->fetch_array()) { // fetch_array() = 한 행식 패치하여 배열로 저장
                     // title 변수에 DB에서 가져온 title을 선택
                     $title=$board["title"];
                     if(strlen($title) > 30) {
                         // title이 30을 넘으면 ...표시
                         $title=str_replace($board["title"], mb_substr($board["title"], 0, 30, "utf-8")."...", $board["title"]);
                     }
+                    // $sql3 = mq("select * from reply where id='".$board['id']."'");
+                    // $rep_count = mysqli_num_rows($sql3);
                     // $filtered = array( // htmlspecitalchar는 이곳에서 필요 x 수정하기!!
                     //     'id'=>htmlspecialchars($board['id']),
                     //     'class'=>htmlspecialchars($board['class']),
@@ -45,7 +66,7 @@
             <tbody>
                 <tr>
                     <td width="70"><?php echo $board["id"]; ?></td>
-                    <td width="150"><?php echo $board["class"]; ?></td>
+                    <td width="100"><?php echo $board["class"]; ?></td>
                     <td width="500"><a href="read.php?id=<?php echo $board["id"];?>"><?php echo $board["title"]; ?></a></td>
                     <td width="120"><?php echo $board["author"]; ?></td>
                     <td width="100"><?php echo $board["date"]; ?></td>
@@ -54,8 +75,35 @@
             </tbody>
             <?php } ?>
         </table>
+        <!-- 페이징 넘버 -->
+        <div id="page_num">
+            <ul>
+                <?php
+                    if($page <= 1) // 현재 페이지가 1이라면
+                        {echo "<li class='fo_re'>[<<]</li>";} // 링크 불가
+                    else {echo "<li><a href='?page=1'>[<<]</a></li>";} // 1번 페이지로 링크
+                    if($page > 1) {
+                        $pre = $page - 1; // 만약 현재 페이지가 3, 이전버튼을 누를 시 2번 페이지로
+                        echo "<li><a href='?page=$pre'>[<]</a></li>"; // 이전 페이지로 링크
+                    }            
+                    for($i = $block_start; $i <= $block_end; $i++) {
+                        // 초기값을 블록의 시작번호를 조건으로 블록 시작 번호가 마지막 블록보다 작거나 같을 때까지 반복
+                        if($page == $i) {echo "<li class='fo_re'>[$i]</li>";} // 현재 페이지 표시
+                        else {echo "<li><a href='?page=$i'>[$i]</a></li>";}
+                    }
+                    if($block_num >= $total_block) {}
+                    else { // 현재 블록이 블록 총 개수보다 적다면
+                        $next = $page + 1;
+                        echo "<li><a href='?page=$next'>[>]</a></li>"; // 다음 페이지 링크. 현재 페이지가 4, +1하여 5페이지로
+                    }
+                    if($page >= $total_page) {echo "<li class='fo_re'>[>>]</li>";} // 마지막 페이지 표시
+                    else {echo "<li><a href='?page=$total_page'>[>>]</a></li>";} // 마지막 페이지로 링크
+
+                ?>
+            </ul>
+        </div>
         <div id="write_btn">
-                <a href="ROOT_WEB/writer.php"><button>글쓰기</button></a>
+                <a href="writer.php"><button>글쓰기</button></a>
         </div>
     </div>
 </body>
