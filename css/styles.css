@@ -6083,7 +6083,7 @@ a.close.disabled {
 }
 
 .bg-primary {
-  background-color: #f8f8f8 !important;
+  /* background-color: #f8f8f8 !important; */
 }
 
 a.bg-primary:hover, a.bg-primary:focus,
@@ -10194,7 +10194,7 @@ h3 {
 
 .floating-label-form-group {
   position: relative;
-  border-bottom: 1px solid #e9ecef;
+  border-bottom: 1px solid #000000;
 }
 .floating-label-form-group input,
 .floating-label-form-group textarea {
