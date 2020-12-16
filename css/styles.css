@@ -6083,7 +6083,7 @@ a.close.disabled {
 }
 
 .bg-primary {
-  /* background-color: #ffffff !important; */
+  background-color: #f8f8f8 !important;
 }
 
 a.bg-primary:hover, a.bg-primary:focus,
