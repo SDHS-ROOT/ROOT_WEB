@@ -14,7 +14,31 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />    
+        <link href="css/styles.css" rel="stylesheet" />
+        <style>
+            .pagination {
+                display: inline-block;
+                padding-left: 0;
+                margin: 20px 0;
+                list-style: none;
+                border-radius: .25rem;
+            }
+    
+            .pagination>li {
+                display: inline;
+            }
+    
+            .pagination a {
+                float: left;
+                padding: 6px 12px;
+                margin-left: -1px;
+                line-height: 1.6;
+                color: #337ab7;
+                text-decoration: none;
+                background-color: #fff;
+                border: 1px solid #ddd;
+            }
+        </style>
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -29,7 +53,7 @@
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="동아리소개.html">동아리 소개</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="대회.html">대회</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="notice board.html">게시판</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="notice.html">게시판</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="가입신청.html">가입신청</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="로그인회원가입.html">로그인 | 회원가입</a></li>
                     </ul>
@@ -51,6 +75,7 @@
         <div class="container">
             <table class="table table-hover">
                 <thead>
+                    <h2>공지사항</h2>
                     <tr>
                         <th>번호</th>
                         <th>제목</th>
@@ -83,8 +108,10 @@
                     </tr>
                 </tbody>
             </table>
-            <a class="btn btn-default">글쓰기</a>      
-            <div style="text-align: center;">
+    
+            <button class="btn btn-default">글쓰기</button>
+    
+            <div class="text-center">
                 <ul class="pagination">
                     <li><a href="#">1</a></li>
                     <li><a href="#">2</a></li>
@@ -93,7 +120,55 @@
                     <li><a href="#">5</a></li>
                 </ul>
             </div>
-        </div>        
+    
+            <table class="table table-hover">
+                <thead>
+                    <h2>자유</h2>
+                    <tr>
+                        <th>번호</th>
+                        <th>제목</th>
+                        <th>작성자</th>
+                        <th>날짜</th>
+                        <th>조회수</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>165</td>
+                        <td>도와주세요.</td>
+                        <td>게스트</td>
+                        <td>2020.X.X</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>165</td>
+                        <td>도와주세요.</td>
+                        <td>게스트</td>
+                        <td>2020.X.X</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>165</td>
+                        <td>도와주세요.</td>
+                        <td>게스트</td>
+                        <td>2020.X.X</td>
+                        <td>3</td>
+                    </tr>
+                </tbody>
+            </table>
+    
+            <a class="btn btn-default">글쓰기</a>
+    
+            <div class="text-center">
+                <ul class="pagination">
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                </ul>
+            </div>
+        </div>
         <!-- Bootstrap core JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
