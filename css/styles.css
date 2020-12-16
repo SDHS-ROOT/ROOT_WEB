@@ -16,7 +16,9 @@
   border: solid 5px black;
 }
 
-
+::-webkit-scrollbar{
+  display: none;
+}
 
 :root {
   --blue: #007bff;
@@ -6081,7 +6083,7 @@ a.close.disabled {
 }
 
 .bg-primary {
-  background-color: #ffffff !important;
+  /* background-color: #ffffff !important; */
 }
 
 a.bg-primary:hover, a.bg-primary:focus,
