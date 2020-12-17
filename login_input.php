@@ -16,6 +16,8 @@
         if(password_verify($password, $hash_pw)) { // 만약 password변수와 hash_pw변수가 같다면 세션값을 저장하고 알림
             $_SESSION['userId'] = $member["id"];
             $_SESSION['userpw'] = $member["password"];
+            $_SESSION['class'] = $member["class"];
+            $_SESSION['author'] = $member["name"];
 
             echo "<script>alert('로그인되었습니다.'); location.href='/ROOT_WEB/index.php';</script>";
         }

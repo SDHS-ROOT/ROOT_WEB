@@ -15,15 +15,15 @@
             <legend>입력사항</legend>
             <table>
                 <tr>
-                    <td>아이디</td>
+                    <td>아이디*</td>
                     <td><input type="text" size="35" name="userId" autocomplete="off" placeholder="아이디"></td>
                 </tr>
                 <tr>
-                    <td>비밀번호</td>
+                    <td>비밀번호*</td>
                     <td><input type="password" size="35" name="userpw" autocomplete="off" placeholder="비밀번호"></td>
                 </tr>
                 <tr>
-                    <td>이름</td>
+                    <td>이름*</td>
                     <td><input type="text" size="35" name="name" autocomplete="off" placeholder="이름"></td>
                 </tr>
                 <tr>
