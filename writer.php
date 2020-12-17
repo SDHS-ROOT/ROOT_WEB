@@ -1,4 +1,5 @@
 <!-- 글 입력 페이지 -->
+<?php include $_SERVER['DOCUMENT_ROOT']."/ROOT_WEB/db.php" ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +24,7 @@
                 </div>
                 <div class="wi_line"></div>
                 <div id="in_author">
-                    <textarea name="author" id="uauthor" cols="55" rows="1" placeholder="글쓴이" maxlength="50" require></textarea>
+                    <textarea name="author" id="uauthor" cols="55" rows="1" readonly><?php echo $_SESSION['username']; ?></textarea>
                 </div>
                 <div class="wi_line"></div>
                 <div id="in_content">

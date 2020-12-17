@@ -17,7 +17,7 @@
             $_SESSION['userId'] = $member["id"];
             $_SESSION['userpw'] = $member["password"];
             $_SESSION['class'] = $member["class"];
-            $_SESSION['author'] = $member["name"];
+            $_SESSION['username'] = $member["name"];
 
             echo "<script>alert('로그인되었습니다.'); location.href='/ROOT_WEB/index.php';</script>";
         }

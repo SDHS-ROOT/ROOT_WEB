@@ -67,7 +67,7 @@
             <tbody>
                 <tr>
                     <td width="70"><?php echo $board["id"]; ?></td>
-                    <td width="100"><?php if($board["class"] == 0) { echo "문의"; } ?></td>
+                    <td width="100"><?php if($board["class"] == 0) { echo "문의"; } else { echo "공지"; } ?></td>
                     <td width="500"><a href="read.php?id=<?php echo $board["id"];?>"><?php echo $board["title"]; ?></a></td>
                     <td width="120"><?php echo $board["author"]; ?></td>
                     <td width="100"><?php echo $board["date"]; ?></td>

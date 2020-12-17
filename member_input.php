@@ -4,7 +4,7 @@
     $count = 0;
     $userId = $_POST['userId'];
     $userpw = password_hash($_POST['userpw'], PASSWORD_DEFAULT);
-    $userName = $_POST['name'];
+    $username = $_POST['name'];
     if(isset($_POST['phone'])) {
         $phone = $_POST['phone'];
         $count++;

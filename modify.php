@@ -25,7 +25,7 @@
                 </div>
                 <div class="wi_line"></div>
                 <div id="in_author">
-                    <textarea name="author" id="uauthor" cols="55" rows="1" autocomplete="off" placeholder="글쓴이" maxlength="100" required><?php echo $board['author']; ?></textarea>
+                    <textarea name="author" id="uauthor" cols="55" rows="1" readonly><?php echo $_SESSION['username']; ?></textarea>
                 </div>
                 <div class="wi_line"></div>
                 <div id="in_content">
