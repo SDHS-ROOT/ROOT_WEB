@@ -72,21 +72,15 @@
                 <br/>
                 <br/>
                 <!-- Contact Section Form-->
-                <div class="row">
+                <div class="row" style="background-color:rgb(245, 245, 245); border-radius: 100px;">
                     <div class="col-lg-8 mx-auto">
                         <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19.-->
                         <form id="contactForm" name="sentMessage" novalidate="novalidate">
+                            <br/>
                             <div class="control-group">
                                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                                    <label>이름</label>
-                                    <input class="form-control" id="name" type="text" placeholder="이름" required="required" data-validation-required-message="이름을 입력하세요." />
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                                    <label>이메일</label>
-                                    <input class="form-control" id="email" type="email" placeholder="이메일" required="required" data-validation-required-message="이메일 주소를 입력하세요." />
+                                    <label>학번이름</label>
+                                    <input class="form-control" id="name" type="text" placeholder="학번이름" required="required" data-validation-required-message="이름을 입력하세요." />
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
@@ -99,14 +93,22 @@
                             </div>
                             <div class="control-group">
                                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                                    <label>메세지</label>
-                                    <textarea class="form-control" id="message" rows="4" placeholder="메세지" required="required" data-validation-required-message="메세지를 입력하세요."></textarea>
+                                    <label>지원동기</label>
+                                    <textarea class="form-control" id="message" rows="4" placeholder="지원동기" required="required" data-validation-required-message="메세지를 입력하세요."></textarea>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                                    <label>자기소개 및 내용(포트폴리오는 루트공식이메일로 보내세요.)</label>
+                                    <textarea class="form-control" id="message" rows="4" placeholder="자기소개 및 내용" required="required" data-validation-required-message="메세지를 입력하세요."></textarea>
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
                             <br />
                             <div id="success"></div>
                             <div class="form-group"><button class="btn btn-primary btn-xl" id="sendMessageButton" type="submit">보내기</button></div>
+                            <br/>
                         </form>
                     </div>
                 </div>
