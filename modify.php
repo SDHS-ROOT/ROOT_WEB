@@ -21,15 +21,15 @@
         <div id="write_area">
             <form action="modify_input.php?id=<?php echo $bno; ?>" method="post">
                 <div id="in_title">
-                    <textarea name="title" id="utitle" cols="55" rows="1" placeholder="제목" maxlength="100" required><?php echo $board['title']; ?></textarea>
+                    <textarea name="title" id="utitle" cols="55" rows="1" autocomplete="off" placeholder="제목" maxlength="100" required><?php echo $board['title']; ?></textarea>
                 </div>
                 <div class="wi_line"></div>
                 <div id="in_author">
-                    <textarea name="author" id="uauthor" cols="55" rows="1" placeholder="글쓴이" maxlength="100" required><?php echo $board['author']; ?></textarea>
+                    <textarea name="author" id="uauthor" cols="55" rows="1" autocomplete="off" placeholder="글쓴이" maxlength="100" required><?php echo $board['author']; ?></textarea>
                 </div>
                 <div class="wi_line"></div>
                 <div id="in_content">
-                    <textarea name="content" id="ucontent"placeholder="내용" required><?php echo $board['content']; ?></textarea>
+                    <textarea name="content" id="ucontent"placeholder="내용" autocomplete="off" required><?php echo $board['content']; ?></textarea>
                 </div>
                 <div class="bt_se">
                     <button type="submit">수정</button>

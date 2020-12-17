@@ -11,16 +11,17 @@
         $password = $_POST['userpw'];
         $sql = mq("select * from member where id='".$_POST['userId']."'");
         $member = $sql->fetch_array();
-        $hash_pw = $member['pw']; // $hash_pw에 POST로 받아온 아이디 열의 비밀번호를 저장
+        $hash_pw = $member['password']; // $hash_pw에 POST로 받아온 아이디 열의 비밀번호를 저장
 
         if(password_verify($password, $hash_pw)) { // 만약 password변수와 hash_pw변수가 같다면 세션값을 저장하고 알림
-            $_SESSION['userId'] = $member['id'];
-            $_SESSION['userpw'] = $member['pw'];
+            $_SESSION['userId'] = $member["id"];
+            $_SESSION['userpw'] = $member["password"];
 
             echo "<script>alert('로그인되었습니다.'); location.href='/ROOT_WEB/index.php';</script>";
         }
         else {
-            echo "<script>alert('아이디 혹은 비밀번호를 확인하세요.'); history.back(); </script>";
+            echo "<script>alert('아이디 혹은 비밀번호를 확인하세요.');
+            history.back(); </script>";
         }
     }
 ?>

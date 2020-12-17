@@ -11,12 +11,12 @@
 </head>
 <body>
     <div id="login_box">
-        <h1>로그인</h1>
+        <h1>로그인이 필요한 페이지입니다.</h1>
         <form method="post" action="login_input.php">
             <table align="center" border="0" cellspacing="0" width="300">
                 <tr>
                     <td width="130" colspan="1">
-                        <input type="text" name="userId" class="inph">
+                        <input type="text" name="userId" class="inph" autocomplete="off">
                     </td>
                     <td rowspan="2" align="center" width="100">
                         <button type="submit" id="btn">로그인</button>
@@ -24,11 +24,12 @@
                 </tr>
                 <tr>
                     <td width="130" colspan="1">
-                        <input type="password" name="userpw" class="inph">
+                        <input type="password" name="userpw" class="inph" autocomplete="off">
                     </td>
                 </tr>
                 <tr>
                     <td align="center" colspan="3" class="mem">
+                        <br>
                         <a href="member.php">회원가입 하시겠습니까?</a>
                     </td>
                 </tr>

@@ -12,6 +12,18 @@
     <div id="board_area">
         <h1>자유게시판</h1>
         <h4>자유롭게 글을 쓸 수 있는 게시판입니다.</h4>
+        <?php
+            if(isset($_SESSION['userId'])) {
+                echo "<h2>{$_SESSION['userId']} 님 환영합니다.</h2>";
+        ?>
+        <a href="/ROOT_WEB/logout.php"><input type="button" value="로그아웃" /></a>
+        <?php
+            }
+            else {
+               echo "<script>alert('잘못된 접근입니다.'); history.back();</script>";
+            }
+        ?>
+        
         <table class="list-table">
             <thead>
                 <tr>
@@ -55,7 +67,7 @@
             <tbody>
                 <tr>
                     <td width="70"><?php echo $board["id"]; ?></td>
-                    <td width="100"><?php echo $board["class"]; ?></td>
+                    <td width="100"><?php if($board["class"] == 0) { echo "문의"; } ?></td>
                     <td width="500"><a href="read.php?id=<?php echo $board["id"];?>"><?php echo $board["title"]; ?></a></td>
                     <td width="120"><?php echo $board["author"]; ?></td>
                     <td width="100"><?php echo $board["date"]; ?></td>
