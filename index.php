@@ -51,16 +51,6 @@
                         // title이 30을 넘으면 ...표시
                         $title=str_replace($board["title"], mb_substr($board["title"], 0, 30, "utf-8")."...", $board["title"]);
                     }
-                    // $sql3 = mq("select * from reply where id='".$board['id']."'");
-                    // $rep_count = mysqli_num_rows($sql3);
-                    // $filtered = array( // htmlspecitalchar는 이곳에서 필요 x 수정하기!!
-                    //     'id'=>htmlspecialchars($board['id']),
-                    //     'class'=>htmlspecialchars($board['class']),
-                    //     'title'=>htmlspecialchars($board['title']),
-                    //     'author'=>htmlspecialchars($board['author']),
-                    //     'date'=>htmlspecialchars($board['date']),
-                    //     'hit'=>htmlspecialchars($board['hit'])
-                    // );
             ?>
             <tbody>
                 <tr>
