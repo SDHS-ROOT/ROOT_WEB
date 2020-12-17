@@ -1,99 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="kr">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>ROOT 가입신청</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
+        <title>가입신청</title>
         <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <script language="JavaScript">
+            day=new Date()
+            m=day.setMonth()
+            if(m>=3 && m<6) { 
+            document.write('<body background="img/봄.jpg">')
+            }
+            else if(m>=6 && m<9) { 
+            document.write('<body background="img/여름.jpg">')
+            }
+            else if(m>=9 && m<12) { 
+            document.write('<body background="img/가을.jpg">')
+            }
+            else if (m=12 || m<3) { 
+            document.write('<body background="img/겨울.jpg">')
+            }
+            </script>
+            <style>
+                body{
+                    background-attachment: fixed;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+            </style>
     </head>
     <body id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
             <div class="container">
                 <a class="navbar-brand js-scroll-trigger" href="#page-top">ROOT</a>
-                <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <!-- <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
-                </button>
+                </button> -->
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="동아리소개.html">동아리 소개</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="대회.html">대회</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="notice.html">게시판</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="가입신청.html">가입신청</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="로그인.html">로그인</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="회원가입.html">회웝가입</a></li>
                     </ul>
                 </div>
             </div>
         </nav>        
-        <div>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            
-        </div>
-        <!-- Contact Section-->
+        <br/>
+        <br/>
+        <br/>
+        <!-- 가입신청 섹션-->
         <section class="page-section" id="contact">
             <div class="container">
                 <!-- Contact Section Heading-->
                 <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">가입신청</h2>
-                <!-- Icon Divider-->
-                <div class="divider-custom">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
+                <br/>
+                <br/>
+                <br/>
                 <!-- Contact Section Form-->
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
                         <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19.-->
                         <form id="contactForm" name="sentMessage" novalidate="novalidate">
+                            <br/>
                             <div class="control-group">
                                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                                    <label>Name</label>
-                                    <input class="form-control" id="name" type="text" placeholder="Name" required="required" data-validation-required-message="Please enter your name." />
+                                    <label>학번이름</label>
+                                    <input class="form-control" id="name" type="text" placeholder="학번이름" required="required" data-validation-required-message="이름을 입력하세요." />
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
                             <div class="control-group">
                                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                                    <label>Email Address</label>
-                                    <input class="form-control" id="email" type="email" placeholder="Email Address" required="required" data-validation-required-message="Please enter your email address." />
+                                    <label>핸드폰 전화번호</label>
+                                    <input class="form-control" id="phone" type="tel" placeholder="핸드폰 전화번호" required="required" data-validation-required-message="핸드폰 전화번호를 입력하세요." />
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
                             <div class="control-group">
                                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                                    <label>Phone Number</label>
-                                    <input class="form-control" id="phone" type="tel" placeholder="Phone Number" required="required" data-validation-required-message="Please enter your phone number." />
+                                    <label>지원동기</label>
+                                    <textarea class="form-control" id="message" rows="4" placeholder="지원동기" required="required" data-validation-required-message="메세지를 입력하세요."></textarea>
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
                             <div class="control-group">
                                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                                    <label>Message</label>
-                                    <textarea class="form-control" id="message" rows="5" placeholder="Message" required="required" data-validation-required-message="Please enter a message."></textarea>
+                                    <label>자기소개 및 내용(포트폴리오는 루트공식이메일로 보내세요.)</label>
+                                    <textarea class="form-control" id="message" rows="4" placeholder="자기소개 및 내용" required="required" data-validation-required-message="메세지를 입력하세요."></textarea>
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
                             <br />
                             <div id="success"></div>
                             <div class="form-group"><button class="btn btn-primary btn-xl" id="sendMessageButton" type="submit">보내기</button></div>
+                            <br/>
                         </form>
                     </div>
                 </div>
             </div>
         </section>
-
+        
         <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
         <!-- <div class="scroll-to-top d-lg-none position-fixed">
             <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a>
