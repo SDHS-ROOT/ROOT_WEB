@@ -19,7 +19,7 @@
             $_SESSION['class'] = $member["class"];
             $_SESSION['username'] = $member["name"];
 
-            echo "<script>alert('로그인되었습니다.'); location.href='/ROOT_WEB/index.php';</script>";
+            echo "<script>alert('로그인되었습니다.'); location.href='/ROOT_WEB/notice.php';</script>";
         }
         else {
             echo "<script>alert('아이디 혹은 비밀번호를 확인하세요.');
