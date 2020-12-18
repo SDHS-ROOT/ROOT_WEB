@@ -111,6 +111,7 @@ ul li {
     width: 900px;
     position: relative;
     word-break: break-all;
+    margin: 0 auto;
 }
 #user_info {
     font-size: 14px;
