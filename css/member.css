@@ -8,10 +8,11 @@ a {
 ul li {
     list-style: none;
 }
-#login_box {
+/* #login_box {
     width: 500px;
     height: 200px;
     border: solid 2px gray;
+    margin-top: 15pc;
 }
 table {
     margin-top: 10px;
@@ -30,4 +31,4 @@ table {
 }
 .inph {
     height: 25px;
-}
+} */
