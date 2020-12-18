@@ -83,6 +83,9 @@
                 $sql2 = mq("select * from board order by id desc limit $start_num, $list");
 
                 while($board = $sql2->fetch_array()) { // fetch_array() = 한 행식 패치하여 배열로 저장
+                // board 테이블에서 id를 기준으로 내림차순해서 5개까지 표시
+                $sql = mq("select * from board order by id desc limit 0,5");
+                while($board = $sql->fetch_array()) {
                     // title 변수에 DB에서 가져온 title을 선택
                     $title=$board["title"];
                     if(strlen($title) > 30) {
