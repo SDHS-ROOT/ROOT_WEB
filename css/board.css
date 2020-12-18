@@ -2,7 +2,7 @@
 
 /* 전체 옵션 */
 * {
-    margin: 0 auto;
+    /* margin: 0 auto; */
     padding: 0;
     font-family: 'Malgun gothic', 'Sans-Serif', 'Arial';
 }
@@ -26,6 +26,7 @@ ul li {
 
 /* 게시판 목록 */
 #board_area {
+    margin: 130px auto;
     width: 900px;
     position: relative;
 }
