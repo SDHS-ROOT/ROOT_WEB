@@ -70,7 +70,7 @@
         <br />
         <br />
         <div id="board_write" class="text-center">
-            <p class="text-center font-weight-bold font-weight-bold" style="font-size: 40px;">게시판 수정</p>
+            <p class="text-center font-weight-bold font-weight-bold" style="font-size: 40px;">게시판 작성</p>
             <div id="write_area">
                 <form action="write_input.php" method="post">
                     <!-- <div id="bt_class">
