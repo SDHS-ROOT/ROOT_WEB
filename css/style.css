@@ -125,7 +125,15 @@ ul li {
     margin-top: 20px;
 }
 #bo_content {
-    margin-top: 20px;
+    width: 860px;
+    height: 300px;
+    margin: 20px 0;
+    padding: 15px 10px;
+    background-color: #fff;
+    border: solid 3px lightgrey;
+    line-height: 1.4;
+    overflow-x: visible;
+    overflow-y: scroll;
 }
 #bo_ser {
     font-size: 14px;
@@ -135,7 +143,11 @@ ul li {
 }
 #bo_ser > ul > li {
     float: left;
-    margin-left: 10px;
+    padding-left: 10px;
+}
+#bo_ser > ul >li > a:hover{
+    font-weight: bolder;
+    color: #333;
 }
 #page_num {
     font-size: 14px;

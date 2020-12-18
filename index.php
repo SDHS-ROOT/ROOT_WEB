@@ -20,7 +20,7 @@
         <?php
             }
             else {
-               echo "<script>alert('잘못된 접근입니다.'); history.back();</script>";
+               echo "<script>alert('로그인이 필요합니다.'); location.href='contact.php';</script>";
             }
         ?>
         
